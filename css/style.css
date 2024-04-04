@@ -1,0 +1,9 @@
+.card {
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+    background-color: grey;
+}
+#Card-Contain {
+display: none;
+}
