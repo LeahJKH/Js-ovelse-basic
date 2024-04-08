@@ -1,5 +1,4 @@
-import { userDocs } from "./module.js";
-import { user } from "./module.js";
+
 
 const userPBtn = document.getElementById("nav-btn-userP")
 
@@ -7,7 +6,9 @@ const cardContain = document.getElementById("Card-Contain");
 const headingTop = document.getElementById("Heading-top");
 const cardShowBtn = document.getElementById("show-Cards");
 
-userPBtn.addEventListener("click", () => {
+
+
+userPBtn.addEventListener("click", function() {
  location.href = "./userProfile.html"
 })
 
@@ -42,10 +43,6 @@ function makeCards() {
 };
 
 
-const number = 2
-const perUser = user.per
 
-userDocs.userName.innerText += " " + perUser.brukernavn; 
-userDocs.userAge.innerText = perUser.alder.toString();
-userDocs.userRealname.innerText = perUser.navn;
-userDocs.userSince.innerText += " " + perUser.brukerSiden;
+
+

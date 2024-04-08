@@ -9,12 +9,14 @@ export const user = {
         brukernavn: "perthedestroyer",
         navn: "per harald",
         alder: 20,
-        brukerSiden: "20.02.2020"
+        brukerSiden: "20.02.2020",
+        password: "meow123"
     },
-    emile: {
+    emilie: {
         brukernavn: "Flowerpower",
         navn: "emilie solheim",
         alder: 18,
-        brukerSiden: "17.04.2022"
+        brukerSiden: "17.04.2022",
+        password: "playwell"
     }
 }
