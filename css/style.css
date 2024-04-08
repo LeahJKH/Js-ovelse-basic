@@ -7,3 +7,8 @@
 #Card-Contain {
 display: none;
 }
+#user-banner {
+    width: 100%;
+    background-color: rgb(176, 158, 171);
+    color: black;
+}
