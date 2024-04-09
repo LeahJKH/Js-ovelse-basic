@@ -1,41 +1,32 @@
 import { infoP } from "./module.js";
+import { pageDocs } from "./module.js";
 
-const userPBtn = document.getElementById("nav-btn-userP")
-
-const cardContain = document.getElementById("Card-Contain");
-const headingTop = document.getElementById("Heading-top");
-const cardShowBtn = document.getElementById("show-Cards");
-
-
-
-userPBtn.addEventListener("click", function() {
+pageDocs.userPBtn.addEventListener("click", function() {
  location.href = "./pages/userProfile.html"
 })
 
-
-
 let cardShown = false;
 
-headingTop.innerText = "blog.yet";
+pageDocs.headingTop.innerText = "blog.yet";
 
 
-makeCards();
 
-cardShowBtn.addEventListener("click", function() {
+pageDocs.cardShowBtn.addEventListener("click", function() {
     if(cardShown) {
-        cardShowBtn.textContent = "Show more"
-        cardContain.style.display = "none"  
+        pageDocs.cardShowBtn.textContent = "Show more"
+        pageDocs.cardContain.style.display = "none"  
     } else {
-        cardShowBtn.textContent = "Show less"
-        cardContain.style.display = "flex"  
+        pageDocs.cardShowBtn.textContent = "Show less"
+        pageDocs.cardContain.style.display = "flex"  
     };
     cardShown = !cardShown
 });
 
+makeCards();
 function makeCards() {
     for(let i = 0; i < infoP.length; i++) {
-        cardContain.innerHTML += `
-        <div class="card" id="cardS${i}">
+        pageDocs.cardContain.innerHTML += `
+        <div class="card">
         <p>${infoP[i]}</p>
         </div>
         `

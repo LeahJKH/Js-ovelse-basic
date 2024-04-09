@@ -1,3 +1,7 @@
 #Card-Contain {
     display: none;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     }

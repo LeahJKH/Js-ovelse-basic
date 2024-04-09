@@ -1,10 +1,6 @@
 import { userDocs } from "./module.js";
 import { user } from "./module.js";
 
-const inputPass = document.querySelector("#input-pass")
-const inputField = document.querySelector("#input-field")
-const checkPassBtn = document.querySelector("#checkpass-user")
-
 let curruser = ""
 
 if (sessionStorage.getItem("user") === "per"){
@@ -15,12 +11,12 @@ if (sessionStorage.getItem("user") === "per"){
     userLoggedIn(curruser);
 }
     
-    checkPassBtn.addEventListener("click", () => {
-     if (inputField.value === user.per.brukernavn && inputPass.value === user.per.password) {
+userDocs.checkPassBtn.addEventListener("click", () => {
+     if (userDocs.inputField.value === user.per.brukernavn && userDocs.inputPass.value === user.per.password) {
         curruser = user.per;
         sessionStorage.setItem("user", "per")
         userLoggedIn(curruser);
-    } else if (inputField.value === user.emilie.brukernavn && inputPass.value === user.emilie.password) {
+    } else if (userDocs.inputField.value === user.emilie.brukernavn && userDocs.inputPass.value === user.emilie.password) {
         curruser = user.emilie;
         sessionStorage.setItem("user", "emilie")
         userLoggedIn(curruser);
