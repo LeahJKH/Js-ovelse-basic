@@ -1,4 +1,4 @@
-
+import { infoP } from "./module.js";
 
 const userPBtn = document.getElementById("nav-btn-userP")
 
@@ -9,10 +9,10 @@ const cardShowBtn = document.getElementById("show-Cards");
 
 
 userPBtn.addEventListener("click", function() {
- location.href = "./userProfile.html"
+ location.href = "./pages/userProfile.html"
 })
 
-const infoP = ["hei jeg ser deg", "månen er fin", "litago er godt", "veldig lang text"];
+
 
 let cardShown = false;
 
