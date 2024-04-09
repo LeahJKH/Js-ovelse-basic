@@ -13,8 +13,6 @@ export const pageDocs = {
      headingTop: document.getElementById("Heading-top"),
      cardShowBtn: document.getElementById("show-Cards"),
 };
-
-
 export const user = {
     per: {
         brukernavn: "perthedestroyer",
