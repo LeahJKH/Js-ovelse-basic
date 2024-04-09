@@ -1,7 +1,8 @@
 /*ID'S*/
 #user-banner {
-    width: 100%;
-    background-color: rgb(176, 158, 171);
+    width: 110%;
+    background-color: rgb(52, 89, 134);
     color: black;
+    display: flex;
 }
 /*ID'S*/
