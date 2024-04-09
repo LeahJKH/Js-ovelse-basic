@@ -1,5 +1,8 @@
-import { userDocs } from "./module.js";
-import { user } from "./module.js";
+import { userDocs, user, pageDocs } from "./module.js";
+
+pageDocs.userHBtn.addEventListener("click", function() {
+    location.href = "../index.html"
+   })
 
 let curruser = ""
 
@@ -10,20 +13,18 @@ if (sessionStorage.getItem("user") === "per"){
     curruser = user.emilie;
     userLoggedIn(curruser);
 }
-    
 userDocs.checkPassBtn.addEventListener("click", () => {
-     if (userDocs.inputField.value === user.per.brukernavn && userDocs.inputPass.value === user.per.password) {
-        curruser = user.per;
-        sessionStorage.setItem("user", "per")
-        userLoggedIn(curruser);
-    } else if (userDocs.inputField.value === user.emilie.brukernavn && userDocs.inputPass.value === user.emilie.password) {
-        curruser = user.emilie;
-        sessionStorage.setItem("user", "emilie")
-        userLoggedIn(curruser);
-    } else {
-
-    }
-});
+                if (userDocs.inputField.value === user.user1.brukernavn && userDocs.inputPass.value === user.user1.password) {
+                    console.log("per found")
+                   curruser = user.user1;
+                   sessionStorage.setItem("user", `${user.user1}`)
+                   userLoggedIn(curruser);
+                } else {
+                console.log("done")
+                }
+            })
+        
+  
 
 function userLoggedIn(userlogged) {
     userDocs.userName.innerText = "Welcome back: " + userlogged.brukernavn; 

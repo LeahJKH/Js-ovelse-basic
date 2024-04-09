@@ -9,12 +9,13 @@ export const userDocs = {
 };
 export const pageDocs = {
      userPBtn: document.getElementById("nav-btn-userP"),
+     userHBtn: document.getElementById("nav-btn-userH"),
      cardContain: document.getElementById("Card-Contain"),
      headingTop: document.getElementById("Heading-top"),
      cardShowBtn: document.getElementById("show-Cards"),
 };
 export const user = {
-    per: {
+    user1: {
         brukernavn: "perthedestroyer",
         navn: "Per Harald",
         alder: 20,
@@ -23,7 +24,7 @@ export const user = {
         pfp: "../images/userPfp/p-pfp.webp",
         posts: [4, 10, 15, 20, 25, 30],
     },
-    emilie: {
+    user2: {
         brukernavn: "Flowerpower",
         navn: "Emilie Solheim",
         alder: 18,
@@ -32,7 +33,7 @@ export const user = {
         pfp: "../images/userPfp/e-pfp.png",
         posts: [3, 9, 14, 19, 24, 29],
     },
-    anna: {
+    user3: {
         brukernavn: "AnnaBanana",
         navn:   "Anna Svensson",
         alder:  25,
@@ -41,7 +42,7 @@ export const user = {
         pfp: "../images/userPfp/a-pfp.png",
         posts: [1, 7, 13, 18, 23, 28],
     },
-    johan: {
+    user4: {
         brukernavn: "JohanLion",
         navn: "Johan Eriksson",
         alder: 22,
@@ -50,7 +51,7 @@ export const user = {
         pfp: "../images/userPfp/j-pfp.png",
         posts: [2, 8, 12, 17, 22, 27],
     },
-    maria: {
+    user5: {
         brukernavn: "MarialovesCats",
         navn: "Maria Rodriguez",
         alder: 30,
@@ -91,4 +92,5 @@ export const infoP = [
     "Føler meg takknemlig for de små øyeblikkene som gjør livet verdt å leve.",
     "Satt og reflekterte over livet. Det er så mye å være takknemlig for!",
     "Skrivende ned mål og drømmer for fremtiden. Veien fremover er spennende!",
+    "hei hei"
 ];
