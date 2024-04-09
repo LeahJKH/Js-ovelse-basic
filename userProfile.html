@@ -3,19 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Userpage</title>
     <script type="module" src="./js/logginn.js"></script>
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/userprofile.css">
 </head>
 <body>
-    <input type="text" id="input-field" placeholder="Name" value="">
-    <input type="password" id="input-pass" placeholder="password" value="">
-    <button id="checkpass-user">Loginn</button>
-    <section id="user-banner">
-        <h3 id="user-name">Welcome back: </h3>
-        <p id="user-realname"></p>
-        <p id="user-age"></p>
-        <p id="user-since">created at: </p>
-    </section>
-</body>
+    <header>
+        <h1>blog.yet</h1>
+        <div>
+            <button id="nav-btn-userH">Homepage</button>
+        </div>
+    </header>
+
+    <main>
+
+        <input type="text" id="input-field" placeholder="Name" value="">
+        <input type="password" id="input-pass" placeholder="password" value="">
+        <button id="checkpass-user">Loginn</button>
+        <section id="user-banner">
+            <h3 id="user-name"></h3>
+            <p id="user-realname"></p>
+            <p id="user-age"></p>
+            <p id="user-since"></p>
+        </section>
+    </main>
+
+    </body>
 </html>

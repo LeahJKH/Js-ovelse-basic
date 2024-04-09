@@ -7,13 +7,22 @@ const checkPassBtn = document.querySelector("#checkpass-user")
 
 let curruser = ""
 
-checkPassBtn.addEventListener("click", () => {
-    console.log(inputField + " " + inputPass)
-    if (inputField.value === user.per.brukernavn && inputPass.value === user.per.password) {
+if (sessionStorage.getItem("user") === "per"){
+    curruser = user.per;
+    userLoggedIn(curruser);
+} else if (sessionStorage.getItem("user") === "emilie"){
+    curruser = user.emilie;
+    userLoggedIn(curruser);
+}
+    
+    checkPassBtn.addEventListener("click", () => {
+     if (inputField.value === user.per.brukernavn && inputPass.value === user.per.password) {
         curruser = user.per;
+        sessionStorage.setItem("user", "per")
         userLoggedIn(curruser);
-    } else if (inputField === user.emilie.brukernavn && inputPass === user.emilie.password) {
+    } else if (inputField.value === user.emilie.brukernavn && inputPass.value === user.emilie.password) {
         curruser = user.emilie;
+        sessionStorage.setItem("user", "emilie")
         userLoggedIn(curruser);
     } else {
 
@@ -21,8 +30,8 @@ checkPassBtn.addEventListener("click", () => {
 });
 
 function userLoggedIn(userlogged) {
-    userDocs.userName.innerText += " " + userlogged.brukernavn; 
+    userDocs.userName.innerText = "Welcome back: " + userlogged.brukernavn; 
     userDocs.userAge.innerText = userlogged.alder.toString();
     userDocs.userRealname.innerText = userlogged.navn;
-    userDocs.userSince.innerText += " " + userlogged.brukerSiden;
+    userDocs.userSince.innerText = "created at: " + userlogged.brukerSiden;
 };

@@ -16,7 +16,7 @@ const infoP = ["hei jeg ser deg", "månen er fin", "litago er godt", "veldig lan
 
 let cardShown = false;
 
-headingTop.innerText = "header text";
+headingTop.innerText = "blog.yet";
 
 
 makeCards();
