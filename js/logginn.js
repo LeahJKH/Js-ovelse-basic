@@ -12,23 +12,31 @@ if (sessionStorage.getItem("user") === "per"){
 } else if (sessionStorage.getItem("user") === "emilie"){
     curruser = user.emilie;
     userLoggedIn(curruser);
-}
-userDocs.checkPassBtn.addEventListener("click", () => {
-                if (userDocs.inputField.value === user.user1.brukernavn && userDocs.inputPass.value === user.user1.password) {
-                    console.log("per found")
-                   curruser = user.user1;
-                   sessionStorage.setItem("user", `${user.user1}`)
-                   userLoggedIn(curruser);
-                } else {
-                console.log("done")
-                }
-            })
-        
+} else {
   
+}
 
+
+    userDocs.checkPassBtn.addEventListener("click", () => {
+        for(let i = 1; i <= Object.keys(user).length; i++) {
+            let usercheck = user[`user${i}`];
+    
+            if (userDocs.inputField.value === usercheck.brukernavn && userDocs.inputPass.value === usercheck.password) {
+                console.log(usercheck);
+                curruser = usercheck;
+                localStorage.setItem("user", JSON.stringify(usercheck)); 
+                userLoggedIn(curruser); 
+                return;
+            }
+        }
+        console.log("Invalid username or password");
+    });  
+  
 function userLoggedIn(userlogged) {
+   
     userDocs.userName.innerText = "Welcome back: " + userlogged.brukernavn; 
     userDocs.userAge.innerText = userlogged.alder.toString();
     userDocs.userRealname.innerText = userlogged.navn;
     userDocs.userSince.innerText = "created at: " + userlogged.brukerSiden;
 };
+

@@ -25,7 +25,7 @@ pageDocs.cardShowBtn.addEventListener("click", function() {
 cardFull()
 
 function cardFull() {
-    let postArr = []
+    let postArr = [];
     let finishedarr = []
     user.user1.posts.forEach(x => {
         postArr.push(
@@ -49,22 +49,11 @@ function cardFull() {
             `
             )
     }))
-    for(let i = 0; i < 32; i++) {
-        let random = Math.floor(Math.random() * 31 + 1) 
+    for(let i = 0; i <= postArr.length; i++) {
+        let random = Math.floor(Math.random() * postArr.length + 1) 
         finishedarr.push(postArr[random])
     }
    console.log(postArr)
    console.log(finishedarr)
     pageDocs.cardContain.innerHTML += finishedarr.toString()
 }
-
-
-
-
-
-
-
-
-
-
-

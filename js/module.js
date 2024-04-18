@@ -1,8 +1,8 @@
 export const userDocs = {
-    userName: document.getElementById("user-name"),
-    userRealname: document.getElementById("user-realname"),
-    userAge: document.getElementById("user-age"),
-    userSince: document.getElementById("user-since"),
+    userName: document.querySelector("#user-name"),
+    userRealname: document.querySelector("#user-realname"),
+    userAge: document.querySelector("#user-age"),
+    userSince: document.querySelector("#user-since"),
     inputPass: document.querySelector("#input-pass"),
     inputField: document.querySelector("#input-field"),
     checkPassBtn: document.querySelector("#checkpass-user")
